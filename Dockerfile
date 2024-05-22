@@ -38,6 +38,9 @@ RUN --mount=type=cache,target=/root/.cache/pip \
     --mount=type=bind,source=requirements.txt,target=requirements.txt \
     python -m pip install -r requirements.txt
 
+
+RUN chmod 777 .
+
 # Switch to the non-privileged user to run the application.
 USER appuser
 
@@ -48,4 +51,4 @@ COPY . .
 EXPOSE 8000
 
 # Run the application.
-CMD uvicorn 'app.main:app' --host=0.0.0.0 --port=8000
+CMD uvicorn 'app.main:app' --host=0.0.0.0 --port=8000 --reload
