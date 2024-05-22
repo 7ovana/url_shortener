@@ -41,8 +41,6 @@ RUN --mount=type=cache,target=/root/.cache/pip \
 
 RUN chmod 777 .
 
-# Switch to the non-privileged user to run the application.
-USER appuser
 
 # Copy the source code into the container.
 COPY . .
