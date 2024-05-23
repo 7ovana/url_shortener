@@ -39,7 +39,7 @@ RUN --mount=type=cache,target=/root/.cache/pip \
     python -m pip install -r requirements.txt
 
 
-RUN chmod 777 .
+RUN chmod 777 urls.db
 
 
 # Copy the source code into the container.
