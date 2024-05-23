@@ -13,11 +13,13 @@ Simple backend for an URL Shortener.
 
 ## Try it out!
 
-`uvicorn app.main:app --reload`
+Build the Docker image and then use:
+
+`docker compose up --build`
 
 Then go to your favourite browser and go to:
 
-- http://127.0.0.1:8000/docs
+- http://0.0.0.0:8000/docs
 
 ## Example
 
